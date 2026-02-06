@@ -3,11 +3,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Welcome to the Flask Demo!'
+    return 'Welcome to the Flask Demo on home page!'
 
 @app.route('/about')
 def about():
-    return 'This is a simple Flask application.'
+    return 'This is a simple Flask application on about page'
 
 @app.route('/api/<age>')
 def checkAge(age):
