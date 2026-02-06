@@ -1,0 +1,5 @@
+file=open("Demo.txt",'w')
+content=input("Enter the content to write in the file: ")
+file.write(content) 
+file.close()
+print("Content written to the Demo.txt successfully.")
