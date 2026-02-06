@@ -9,6 +9,12 @@ def home():
 def about():
     return 'This is a simple Flask application.'
 
+@app.route('/api/<age>')
+def checkAge(age):
+        if int(age) < 18:
+            return 'You are a minor.'
+        else:
+            return 'You are an adult.'
 
 
 
