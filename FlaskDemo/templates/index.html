@@ -8,12 +8,32 @@
 <body>
     <h1>Welcome to the Flask Demo!</h1>
     <p>This is a simple Flask application to demonstrate how to render HTML templates.</p>
+    <div class="content">
+        <form action="/submit" method="post">
+            <label for="first_name">Enter your name:</label>
+            <input type="text" id="first_name" name="first_name" >
+            
+            <label for="last_name">Enter your last name:</label>
+            <input type="text" id="last_name" name="last_name" >
+
+            <label for="age">Enter your age:</label>
+            <input type="text" id="age" name="age" >
+
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" >
+
+            <label for="password">Enter your password:</label>
+            <input type="password" id="password" name="password" >
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     
 </body>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #080808;
+        background-color: #857f7f;
         text-align: center;
         padding: 50px;
     }
@@ -22,6 +42,35 @@
     }
     p {
         color: #8e968a;
+    }
+    .content {
+        margin-top: 20px;
+        background-color: #080808;
+        padding: 20px;
+        border-radius: 10px;
+        color: #ccd1a3;
+        display: inline-block;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        color: #ccd1a3;
+    }
+    input {
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
     }
 
 </style>

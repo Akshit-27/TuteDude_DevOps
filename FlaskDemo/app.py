@@ -9,13 +9,18 @@ def home():
 def about():
     return 'This is a simple Flask application on about page'
 
-@app.route('/api/<age>')
-def checkAge(age):
-        if int(age) < 18:
-            return 'You are a minor.'
-        else:
-            return 'You are an adult.'
+@app.route('/submit', methods=['POST'])
+def submit():
+    first_name = request.form['first_name']
+    last_name = request.form['last_name']
+    age = request.form['age']
+    email = request.form['email']
+    pwd =request.form['password']
 
+    result = "Hi ! " + first_name + " " + last_name + ". \n Your Age is : " + age + " \n Your email is :" + email + "\n Your password is : "  + pwd + " \n\n\n  Your form has been submitted successfully."
+    
+    form_data = dict(request.form)
+    return form_data
 
 
 if __name__ == '__main__':
