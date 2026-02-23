@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoFlask Application</title>
+</head>
+<body>
+    <header>
+    <h1>Welcome to ToDoFlask Application</h1>
+    </header>
+<div class="todo">
+
+    <form action="/submit" method="post">
+        <label for="todo">Enter a new To-Do item:</label>
+        <input type="text" id="todo" name="todo" required>
+        <button type="submit">Add ToDo</button>
+    </form>
+</div>
+
+<!-- add a button to get a list of all the todo items in the database and display them in a new page called "todolist.html" with a simple list format and a back button to go back to the home page -->
+    <div class="todo">
+        <form action="/api" method="get">
+            <button type="submit">View To-Do List</button>
+        </form>
+    
+
+    <footer>
+        <p>&copy; 2026 ToDoFlask Application designed by Akshit Agarwal</p>
+    </footer>
+</body>
+<style>
+    /* change the colour the background colour of the page to light blue and make the text colour dark grey & make the other colours also matching to this  */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #add8e6;
+        color: #333;
+        
+    }
+
+    h1 {
+        color: #333;
+
+    }
+
+    form {
+        margin-top: 20px;
+
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+
+    }
+
+    input[type="text"] {
+        width: 300px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+
+    button {
+        padding: 8px 16px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+    /* place the footer at the bottom of the page make it more stylish & small */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px 0;
+        margin-left: -20px;
+        font-size: 10px;
+        color: #555;
+    }
+/* make the header more stylish with a background colour matching to the back and a border at the bottom */
+    header {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* make the todo form more stylish & centered with a background color */
+    .todo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        background-color: #e9ecef;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+</style>
+</html>
